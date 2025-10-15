@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: brainburst-deployment
+  namespace: brainburst
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: brainburst
+  template:
+    metadata:
+      labels:
+        app: brainburst
+    spec:
+      containers:
+      - name: brainburst
+        image: YOUR_DOCKERHUB_USERNAME/brainburst:1.0.0
+        ports:
+        - containerPort: 80
