@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BrainBurst Enhanced Quiz</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="quiz-container">
+    <h1>🧠 BrainBurst Quiz</h1>
+    <div class="progress-bar">
+      <div id="progress"></div>
+    </div>
+    <div id="question-container">
+      <p id="question">Loading...</p>
+      <div id="answer-buttons" class="btn-grid"></div>
+    </div>
+    <button id="next-btn" class="next-btn hide">Next</button>
+    <p id="score" class="score">Score: 0</p>
+  </div>
+  <audio id="correct-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_9a9e2e07e7.mp3?filename=correct-2-46134.mp3"></audio>
+  <audio id="wrong-sound" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_31fa77a85b.mp3?filename=error-126627.mp3"></audio>
+  <script src="script.js"></script>
+</body>
+</html>
