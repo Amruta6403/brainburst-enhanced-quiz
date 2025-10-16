@@ -10,7 +10,7 @@ pipeline {
     stage('Build') { steps { sh "docker build -t ${IMAGE}:${VERSION} ." } }
     stage('Push') {
       steps {
-        withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'DOCKER_USER', passwordVariable: 'DOCKER_PASS')]) {
+        withCredentials([usernamePassword(credentialsId: 'dockerhub-creds', usernameVariable: 'amruta6403', passwordVariable: 'mali6403')]) {
           sh 'echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin'
           sh "docker push ${IMAGE}:${VERSION}"
         }
